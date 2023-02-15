@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "MVUx.Windows": {
+      "commandName": "MsixPackage"
+    }
+  }
+}
