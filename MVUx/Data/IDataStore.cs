@@ -10,6 +10,9 @@ namespace MVUx.Data;
 public interface IDataStore
 {
     ValueTask<IImmutableList<Person>> GetPeople(
-        //PageRequest page,
+        CancellationToken ct);
+
+    ValueTask<IImmutableList<Person>> GetPeople(
+        PageRequest page,
         CancellationToken ct);
 }

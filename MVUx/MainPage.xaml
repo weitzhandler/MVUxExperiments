@@ -12,19 +12,49 @@
 
     <Grid>
         <uer:FeedView Source="{Binding People}">
+            <uer:FeedView.ErrorTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Error occurred, data:" />
+                        <TextBlock Text="{Binding}" />
+                    </StackPanel>
+                </DataTemplate>
+            </uer:FeedView.ErrorTemplate>
+
+            <uer:FeedView.NoneTemplate>
+                <DataTemplate>
+                    <TextBlock Text="No data"/>
+                </DataTemplate>
+            </uer:FeedView.NoneTemplate>
+
+            <uer:FeedView.UndefinedTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Undefined"/>
+                </DataTemplate>
+            </uer:FeedView.UndefinedTemplate>
+
+
+            <uer:FeedView.ProgressTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Loading..."/>
+                </DataTemplate>
+            </uer:FeedView.ProgressTemplate>
+
             <DataTemplate>
                 <ListView ItemsSource="{Binding Data}">
+                    <ListView.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="Refresh" Command="{Binding Refresh}"/>
+                        </StackPanel>
+                    </ListView.Header>
                     <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="models:Person">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{x:Bind FirstName}"/>
-                                <TextBlock Text="{x:Bind LastName}"/>
-                            </StackPanel>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </DataTemplate>
-            
+
         </uer:FeedView>
     </Grid>
 </Page>
