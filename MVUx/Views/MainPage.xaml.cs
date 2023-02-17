@@ -4,7 +4,7 @@ using MVUx.Presentation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace MVUx;
+namespace MVUx.Views;
 
 /// <summary>
 /// An empty page that can be used on its own or navigated to within a Frame.
@@ -14,10 +14,5 @@ public sealed partial class MainPage : Page
     public MainPage()
     {
         this.InitializeComponent();
-
-        var dataStore = new DataStore();
-        var bindableVM = new MainViewModel.BindableMainViewModel(dataStore);
-
-        this.DataContext = bindableVM;
     }
 }

@@ -1,10 +1,10 @@
 using System;
-using Microsoft.Extensions.Logging;
-using Windows.ApplicationModel;
-using Windows.ApplicationModel.Activation;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
+using MVUx.Views;
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.Activation;
 
 namespace MVUx;
 
