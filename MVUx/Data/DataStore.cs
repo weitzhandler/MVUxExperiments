@@ -12,20 +12,20 @@ namespace MVUx.Data;
 
 public class DataStore : IDataStore
 {
-    public async ValueTask<IImmutableList<Person>> GetPeople(
+    public async ValueTask<IImmutableList<Person>> GetPeopleAsync(
         CancellationToken ct = default)
     {
         await Task.Delay(1000, ct);
 
         var data =
             await GetUnlimitedPeople()
-            .Take(20)
+            .Take(5)
             .ToListAsync();
 
         return data.ToImmutableList();
     }
 
-    public async ValueTask<IImmutableList<Person>> GetPeople(
+    public async ValueTask<IImmutableList<Person>> GetPeopleAsync(
     PageRequest page,
     CancellationToken ct = default)
     {

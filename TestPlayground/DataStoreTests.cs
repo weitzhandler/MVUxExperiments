@@ -25,7 +25,7 @@ namespace TestPlayground
             // act
             for (int i = 0; i < pageCount; i++)
             {
-                var people = await store.GetPeople(page);
+                var people = await store.GetPeopleAsync(page);
                 result.AddRange(people);
 
                 page =
@@ -47,7 +47,7 @@ namespace TestPlayground
             var store = new DataStore();
 
             // act
-            var result = await store.GetPeople();
+            var result = await store.GetPeopleAsync();
 
             // assert
             Assert.Equal(expected: 20, actual: result.Count);

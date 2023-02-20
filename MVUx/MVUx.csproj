@@ -38,9 +38,11 @@
   <ItemGroup>
     <None Remove="Styles\FeedView.xaml" />
     <None Remove="Views\ListFeedView.xaml" />
+    <None Remove="Views\ListStateView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <UpToDateCheckInput Remove="Styles\FeedView.xaml" />
     <UpToDateCheckInput Remove="Views\ListFeedView.xaml" />
+    <UpToDateCheckInput Remove="Views\ListStateView.xaml" />
   </ItemGroup>
 </Project>

@@ -9,10 +9,10 @@ namespace MVUx.Data;
 
 public interface IDataStore
 {
-    ValueTask<IImmutableList<Person>> GetPeople(
+    ValueTask<IImmutableList<Person>> GetPeopleAsync(
         CancellationToken ct);
 
-    ValueTask<IImmutableList<Person>> GetPeople(
+    ValueTask<IImmutableList<Person>> GetPeopleAsync(
         PageRequest page,
         CancellationToken ct);
 }

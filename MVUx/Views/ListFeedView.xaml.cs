@@ -17,7 +17,7 @@ public sealed partial class ListFeedView : UserControl
         this.InitializeComponent();
 
         var dataStore = new DataStore();
-        var bindableVM = new MainViewModel.BindableMainViewModel(dataStore);
+        var bindableVM = new ListFeedViewModel.BindableListFeedViewModel(dataStore);
 
         this.DataContext = bindableVM;
     }
